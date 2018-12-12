@@ -53,6 +53,9 @@ $route['default_controller'] = 'home';
 $route['404_override'] = 'home/error_page_not_found';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['page/(:num)'] = 'home';
+
+
 $route['admin'] = 'Admin/Account/login';
 
 $route['(:any)/details/(:any)'] = 'Escorts';
@@ -62,3 +65,5 @@ $route['escorts/(:any)'] = 'Escorts/country';
 
 $route['escorts/(:any)/(:any)'] = 'Escorts/city';
 $route['escorts/(:any)/(:any)/(:num)'] = 'Escorts/city';
+
+

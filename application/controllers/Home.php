@@ -14,7 +14,18 @@ class Home extends MY_Controller
 	{
 		$data['all_contry_key'] = $this->website->getAllCountry();
 		$data['premium_and_vip_post_key'] = $this->website->getAllPremiumAndVipPost();
-		$data['free_and_top_post_key'] = $this->website->getAllFreeListingaAndTopPost();
+		
+
+
+		$config['base_url'] = base_url() . "/page";
+		$config['total_rows'] = $this->website->getCountOflistingTopPost();
+		$config['per_page'] = 70 ; 
+
+
+		$data['free_and_top_post_key'] = $this->website->getAllFreeListingaAndTopPost($config['per_page'],$this->uri->segment(2));
+
+		$this->pagination->initialize($config); 
+
 		$data['banner_key'] = $this->website->getAllActiveBannre();
 		$this->load->view('website/home_view',$data);
 	}
@@ -37,5 +48,13 @@ class Home extends MY_Controller
 		$data['all_contry_key'] = $this->website->getAllCountry();
 		$data['banner_key'] = $this->website->getAllActiveBannre();
 		$this->load->view('website/error_404',$data);
+	}
+	public function getpaymentperiod()
+	{
+		if ($this->input->server('REQUEST_METHOD') == 'POST') {
+			$payment_caegory_id = $this->input->post('payment_caegory_id');
+			header('Content-Type: application/json');
+    		echo json_encode(array('status' =>'success','payment_period'=>$this->common->getPaymentPeriodByCategory($payment_caegory_id),'message'=>'data fetch successfully'));
+		}
 	}
 }

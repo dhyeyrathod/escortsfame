@@ -15,7 +15,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 mb-4 mt-4">
-                            <div class="bannersLink"> <a href="#"> Live Sex </a> <a href="#"> London Escorts </a> <a href="#"> Cam Girls </a> </div>
+                            <div class="bannersLink"> 
+                                <a href="http://www.komalshrma.com/"> Bangalore Escorts </a> 
+                                <a href="https://www.delhiescortsx.com/"> Delhi Escorts </a> 
+                                <a href="http://www.ankitavermas.com/"> Mumbai Escorts </a> 
+                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6 mb-4 mt-4">
                             <?php $this->load->view('website/common/filter_city_country') ?>
@@ -52,9 +56,9 @@
                                             <input type="password" name="password" value="<?= set_value('password') ?>" class="form-control" id="password" placeholder="Your password">
                                             <div class="validation"><?= form_error('password') ? form_error('password') : "" ?></div>
                                         </div>
-                                        <a class="text-center" href="<?= base_url('account/signup') ?>">If You have not account than sign up</a>
                                         <div class="text-center">
                                             <button type="submit" class="submit">Login</button>
+                                            <a href = "<?= base_url('account/signup') ?>"> <button type="button" class="submit">Sign Up</button> </a>
                                         </div>
                                     <?= form_close() ; ?>
                                 </div>

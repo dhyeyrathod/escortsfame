@@ -15,7 +15,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 mb-4 mt-4">
-                            <div class="bannersLink"> <a href="#"> Live Sex </a> <a href="#"> London Escorts </a> <a href="#"> Cam Girls </a> </div>
+                            <div class="bannersLink"> 
+                                <a href="http://www.komalshrma.com/"> Bangalore Escorts </a> 
+                                <a href="https://www.delhiescortsx.com/"> Delhi Escorts </a> 
+                                <a href="http://www.ankitavermas.com/"> Mumbai Escorts </a> 
+                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6 mb-4 mt-4">
                             <?php $this->load->view('website/common/filter_city_country') ?>
@@ -73,5 +77,38 @@
         <?php $this->load->view('website/common/footer') ?>
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         <?php $this->load->view('website/common/js') ?>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                //Disable full page
+                $("body").on("contextmenu",function(e){
+                    return false;
+                });
+                
+                //Disable part of page
+                $("#id").on("contextmenu",function(e){
+                    return false;
+                });
+                
+                 //Disable full page
+                $('body').bind('cut copy paste', function (e) {
+                    e.preventDefault();
+                });
+                
+                //Disable part of page
+                $('#id').bind('cut copy paste', function (e) {
+                    e.preventDefault();
+                });
+                
+                //Disable cut copy paste
+                $('body').bind('cut copy paste', function (e) {
+                    e.preventDefault();
+                });
+               
+                //Disable mouse right click
+                $("body").on("contextmenu",function(e){
+                    return false;
+                });
+            });
+        </script>
     </body>
 </html>

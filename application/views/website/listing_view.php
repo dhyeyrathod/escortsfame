@@ -23,7 +23,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5 col-md-5 mb-4 mt-4">
-                            <div class="bannersLink"> <a href="#"> Live Sex </a> <a href="#"> London Escorts </a> <a href="#"> Cam Girls </a> </div>
+                            <div class="bannersLink"> 
+                                <a href="http://www.komalshrma.com/"> Bangalore Escorts </a> 
+                                <a href="https://www.delhiescortsx.com/"> Delhi Escorts </a> 
+                                <a href="http://www.ankitavermas.com/"> Mumbai Escorts </a> 
+                            </div>
                         </div>
                         <div class="col-lg-7 col-md-7 mb-4 mt-4">
                             <?php $this->load->view('website/common/filter_city_country') ?>
@@ -51,6 +55,9 @@
                                     <h3 class="section-title"><?= $this->uri->segment(2) ?> Escorts</h3>
                                 <?php endif ; ?>
                             </header>
+                            <div class="container-fluid" style="padding: 20px">
+                                <a href="http://www.twistsam.com/" target="_blank"><img src="http://localhost/jayrathod/cityxguid/assets/banner/twistsam-real.jpg" style="width: 100%"></a>
+                            </div>
                             <div class="row">
                                 <?php if ($free_toplinks_post_key) : ?>
                                 <div class="col-lg-12 col-md-12">
@@ -58,7 +65,7 @@
                                         <ul>
                                             <?php foreach ($free_toplinks_post_key as $free_toplinks_post_data) : ?>
                                                 <?php $url = base_url().str_replace(' ','-',$free_toplinks_post_data->title)."/details/".$this->friend->base64url_encode($free_toplinks_post_data->id) ?>
-                                                <li><a href="<?= $url ?>"><span><i class="fa fa-chevron-right"></i></span> <?= $free_toplinks_post_data->name ?></a><span> - <?= mb_substr($free_toplinks_post_data->description,0,100) ?></span></li>
+                                                <li><a href="<?= $url ?>"><span><i class="fa fa-chevron-right"></i></span> <?= $free_toplinks_post_data->name ?></a><span> - <?= mb_substr($free_toplinks_post_data->title,0,100) ?></span></li>
                                             <?php endforeach ; ?>
                                         </ul>
                                     </div>
@@ -119,5 +126,6 @@
                 window.location.replace(redirect_url);
             });
         </script>
+        <script src="<?= base_url('assets/website') ?>/js/content_copy_restriction.js" type="text/javascript"></script>
     </body>
 </html>

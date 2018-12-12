@@ -128,6 +128,11 @@ $config = array(
                                             'rules' => 'required'
                                          ),
                                     array(
+                                        'field' => 'contact_number',
+                                        'label' => 'Contact Number',
+                                        'rules' => 'required'
+                                    ),
+                                    array(
                                             'field' => 'website_url',
                                             'label' => 'Website URL',
                                             'rules' => 'required'

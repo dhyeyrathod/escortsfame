@@ -77,13 +77,13 @@ $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 
+	// 'username' => 'root',
+	// 'password' => '',
+	// 'database' => 'escortsfame',
+
 	'username' => 'root',
 	'password' => '',
 	'database' => 'escortfame',
-
-	// 'username' => 'instanth_fame',
-	// 'password' => 'fame123',
-	// 'database' => 'instanth_escortsfame',
 	
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',

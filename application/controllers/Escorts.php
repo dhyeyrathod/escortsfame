@@ -28,7 +28,7 @@ class Escorts extends MY_controller
 		if ($country_data) {
 			$config['base_url'] = base_url('escorts')."/".$this->uri->segment(2);
 			$config['total_rows'] = $this->website->getTotalfreePrePostbyCountry($country_data->country_id);
-			$config['per_page'] = 30;
+			$config['per_page'] = 100;
 			$this->pagination->initialize($config);
 			$data['free_toplinks_post_key'] = $this->website->getAllFreeAndPremiumPost($country_data->country_id,0,$config['per_page'],$this->uri->segment(3) ? $this->uri->segment(3) : 0);
 			$data['all_contry_key'] = $this->website->getAllCountry();
@@ -45,7 +45,7 @@ class Escorts extends MY_controller
 		if ($city_data) {
 			$config['base_url'] = base_url('escorts')."/".$this->uri->segment(2)."/".$this->uri->segment(3);
 			$config['total_rows'] = $this->website->getTotalfreePrePostbyCountry(0,$city_data->city_id);
-			$config['per_page'] = 30;
+			$config['per_page'] = 100;
 			$this->pagination->initialize($config);
 			$data['free_toplinks_post_key'] = $this->website->getAllFreeAndPremiumPost(0,$city_data->city_id,$config['per_page'],$this->uri->segment(4) ? $this->uri->segment(4) : 0);
 			$country_data = $this->common->getCountryDetailsByName($this->uri->segment(2));

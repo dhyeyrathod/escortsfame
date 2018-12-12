@@ -15,13 +15,21 @@ class Website extends MY_Model
 	}
 	public function getAllPremiumAndVipPost()
 	{
-		$sql_str = "SELECT * FROM profiles INNER JOIN cities ON profiles.fk_city_id = cities.city_id WHERE fk_payment_category_id IN (3,4) AND DATEDIFF(expiry_date,NOW()) > 0 ORDER BY RAND() LIMIT 100 OFFSET 0";
+		$sql_str = "SELECT * FROM profiles INNER JOIN cities ON profiles.fk_city_id = cities.city_id WHERE fk_payment_category_id IN (3,4) AND profiles.status = true AND DATEDIFF(expiry_date,NOW()) > 0 ORDER BY RAND() LIMIT 100 OFFSET 0";
 		return $this->db->query($sql_str)->result();
 	}
-	public function getAllFreeListingaAndTopPost()
+	public function getAllFreeListingaAndTopPost($limit , $offset = 0)
 	{
-		$sql_str = "SELECT * FROM profiles INNER JOIN cities ON profiles.fk_city_id = cities.city_id WHERE profiles.status = TRUE AND fk_payment_category_id IN (1,2) AND DATEDIFF(expiry_date,NOW()) > 0 ORDER BY RAND() LIMIT 100 OFFSET 0";
+		$sql_str = "SELECT * FROM profiles INNER JOIN cities ON profiles.fk_city_id = cities.city_id WHERE profiles.status = TRUE AND fk_payment_category_id IN (1,2) LIMIT $limit";
+		if ($offset != 0) {
+			$sql_str .=  " OFFSET $offset";
+		}
 		return $this->db->query($sql_str)->result();
+	}
+	public function getCountOflistingTopPost()
+	{
+		$sql_str = "SELECT * FROM profiles INNER JOIN cities ON profiles.fk_city_id = cities.city_id WHERE profiles.status = TRUE AND fk_payment_category_id IN (1,2) # AND DATEDIFF(expiry_date,NOW()) > 0 ORDER BY RAND() LIMIT 100 OFFSET 0";
+		return $this->db->query($sql_str)->num_rows();
 	}
 	public function getSingleEscortsDetailsById($escorts_id)
 	{
@@ -79,10 +87,10 @@ class Website extends MY_Model
 	public function setProfile($data,$image,$user_id,$post_id=0)
 	{
 		if ($post_id == 0) {
-			$sql_str = "INSERT INTO profiles SET name = ".$this->db->escape($data['name']).", email = ".$this->db->escape($data['email']).",website_url = ".$this->db->escape($data['website_url']).",title = ".$this->db->escape($data['title']).",description = ".$this->db->escape($data['description']).",fk_country_id=".$this->db->escape($data['country']).",fk_city_id = ".$this->db->escape($data['city']).",image = ".$this->db->escape($image).",fk_type_id = ".$this->db->escape($data['type']).",fk_payment_category_id = ".$this->db->escape($data['payment_category']).",fk_payment_period = ".$this->db->escape($data['payment_period'])." , user_id = ".$this->db->escape($user_id)." ,status = true , created_by = ".$this->db->escape($user_id)." , created_date = NOW() , activation_date = NOW() , expiry_date = DATE_ADD(NOW(), INTERVAL ".$this->db->escape($data['payment_period'])." DAY)";
+			$sql_str = "INSERT INTO profiles SET name = ".$this->db->escape($data['name']).", contact_number = ".$this->db->escape($data['contact_number'])." , email = ".$this->db->escape($data['email']).",website_url = ".$this->db->escape($data['website_url']).",title = ".$this->db->escape($this->clean_string($data['title'])).",description = ".$this->db->escape($data['description']).",fk_country_id=".$this->db->escape($data['country']).",fk_city_id = ".$this->db->escape($data['city']).",image = ".$this->db->escape($image).",fk_type_id = ".$this->db->escape($data['type']).",fk_payment_category_id = ".$this->db->escape($data['payment_category']).",fk_payment_period = ".$this->db->escape($data['payment_period'])." , user_id = ".$this->db->escape($user_id)." ,status = true , created_by = ".$this->db->escape($user_id)." , created_date = NOW() , activation_date = NOW() , expiry_date = DATE_ADD(NOW(), INTERVAL ".$this->db->escape($data['payment_period'])." DAY)";
 			return $this->db->query($sql_str);
 		} else {
-			$sql_str = "UPDATE profiles SET name = ".$this->db->escape($data['name']).", email = ".$this->db->escape($data['email']).",website_url = ".$this->db->escape($data['website_url']).",title = ".$this->db->escape($data['title']).",description = ".$this->db->escape($data['description']).",fk_country_id=".$this->db->escape($data['country']).",fk_city_id = ".$this->db->escape($data['city']).",image = ".$this->db->escape($image).",fk_type_id = ".$this->db->escape($data['type']).", status = true , updated_by = ".$this->db->escape($user_id)." , updated_date = NOW() WHERE id = ".$this->db->escape($post_id);
+			$sql_str = "UPDATE profiles SET name = ".$this->db->escape($data['name']).", email = ".$this->db->escape($data['email']).",website_url = ".$this->db->escape($data['website_url']).",title = ".$this->db->escape($this->clean_string($data['title'])).",description = ".$this->db->escape($data['description']).",fk_country_id=".$this->db->escape($data['country']).",fk_city_id = ".$this->db->escape($data['city']).",image = ".$this->db->escape($image).",fk_type_id = ".$this->db->escape($data['type']).", status = true , updated_by = ".$this->db->escape($user_id)." , updated_date = NOW() WHERE id = ".$this->db->escape($post_id);
 			return $this->db->query($sql_str);
 		}
 	}
@@ -104,5 +112,11 @@ class Website extends MY_Model
 	{
 		$sql_str = "SELECT profiles.id , name , email , website_url , title , description , image , fk_payment_period , user_id , profiles.status as status , created_by , created_date , activation_date , expiry_date , updated_by , updated_date , contact_number , countries.country_name as country_name , countries.country_id as country_id , sortname , phonecode , payment_category_name , type.id as type_id , type , cities.city_id as city_id ,city_name , profiles.contact_number as contact_number FROM profiles INNER JOIN countries ON profiles.fk_country_id=countries.country_id INNER JOIN payment_category ON profiles.fk_payment_category_id=payment_category.id INNER JOIN type ON profiles.fk_type_id=type.id INNER JOIN cities ON profiles.fk_city_id=cities.city_id WHERE profiles.id = ".$this->db->escape($post_id);
 		return $this->db->query($sql_str)->row();
+	}
+	public function clean_string($string) {
+
+	   $string = str_replace(' ', '-', $string); // Replaces all spaces with hyphens.
+
+	   return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
 	}
 }

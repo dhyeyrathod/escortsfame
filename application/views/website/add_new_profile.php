@@ -15,7 +15,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 mb-4 mt-4">
-                            <div class="bannersLink"> <a href="#"> Live Sex </a> <a href="#"> London Escorts </a> <a href="#"> Cam Girls </a> </div>
+                            <div class="bannersLink"> 
+                                <a href="http://www.komalshrma.com/"> Bangalore Escorts </a> 
+                                <a href="https://www.delhiescortsx.com/"> Delhi Escorts </a> 
+                                <a href="http://www.ankitavermas.com/"> Mumbai Escorts </a> 
+                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6 mb-4 mt-4">
                             <?php $this->load->view('website/common/filter_city_country') ?>
@@ -60,6 +64,12 @@
                                             <input type="text" value="<?= set_value('website_url') ?>" class="form-control" name="website_url" placeholder="Website Url">
                                             <?php if (form_error('website_url')) : ?>
                                                 <div class="validation"><?= form_error('website_url') ?></div>
+                                            <?php endif ; ?>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" value="<?= set_value('contact_number') ?>" class="form-control" name="contact_number" placeholder="Contact Number">
+                                            <?php if (form_error('contact_number')) : ?>
+                                                <div class="validation"><?= form_error('contact_number') ?></div>
                                             <?php endif ; ?>
                                         </div>
                                         <div class="form-group">
@@ -149,8 +159,7 @@
         <script type="text/javascript">
             $( "#select_country" ).change(function() {
                 var country_id = $("#select_country").val();
-                debugger ;
-                var ajex_url = base_url + "admin/common_admin/getcity";
+                var ajex_url = base_url + "home/getcities";
                 $.ajax({
                     type: "POST",
                     url: ajex_url,
@@ -173,12 +182,14 @@
             });
             $("#select-payment-category").change(function() {
                 var payment_caegory_id = $("#select-payment-category").val();
-                var ajex_url = base_url + "admin/common_admin/getpaymentperiod";
+                var ajex_url = base_url + "home/getpaymentperiod";
+                debugger ;
                 $.ajax({
                     type: "POST",
                     url: ajex_url,
                     data: {payment_caegory_id:payment_caegory_id},
                     success: function(response){
+                    debugger ;
                         if (response.payment_period.length) {
                             $("#select-payment-period").html('');
                             var html_str = '<option value="">---Select Payment period---</option>';
@@ -187,7 +198,6 @@
                                 html_str += '<option value="'+response.payment_period[i].days+'">'+response.payment_period[i].payment_period_description+'</option>'
                             }
                             $("#select-payment-period").html(html_str);
-                            // $("#payment_period_tab").show();
                         } else {
                             alert("data is is not present");
                         }

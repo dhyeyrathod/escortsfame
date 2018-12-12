@@ -15,7 +15,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5 col-md-5 mb-4 mt-4">
-                            <div class="bannersLink"> <a href="#"> Live Sex </a> <a href="#"> London Escorts </a> <a href="#"> Cam Girls </a> </div>
+                            <div class="bannersLink"> 
+                                <a href="http://www.komalshrma.com/"> Bangalore Escorts </a> 
+                                <a href="https://www.delhiescortsx.com/"> Delhi Escorts </a> 
+                                <a href="http://www.ankitavermas.com/"> Mumbai Escorts </a> 
+                            </div>
                         </div>
                         <div class="col-lg-7 col-md-7 mb-4 mt-4">
                             <?php $this->load->view('website/common/filter_city_country') ?>
@@ -61,12 +65,6 @@
                                         <div class="author-account">Type</div>
                                         <div class="author-account"><?= $escorts_details_key->payment_category_name ?></div>
                                     </div>
-                                    <?php if ($this->session->userdata('user_id')) : ?>
-                                        <div class="author-account-group">
-                                            <div class="author-account">Days Remaining</div>
-                                            <div class="author-account"><?= "" ?></div>
-                                        </div>
-                                    <?php endif ; ?>
                                 </div>
                                 <div class="author-menu">
                                     <h4>Contact Details</h4>
@@ -99,5 +97,6 @@
         <?php $this->load->view('website/common/footer') ?>
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         <?php $this->load->view('website/common/js') ?>
+        <script src="<?= base_url('assets/website') ?>/js/content_copy_restriction.js" type="text/javascript"></script>
     </body>
 </html>

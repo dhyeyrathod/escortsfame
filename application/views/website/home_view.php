@@ -15,17 +15,20 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-5 col-md-5 mb-4 mt-4">
-                            <div class="bannersLink"> <a href="#"> Live Sex </a> <a href="#"> London Escorts </a> <a href="#"> Cam Girls </a> </div>
+                            <div class="bannersLink"> 
+                                <a href="http://www.komalshrma.com/"> Bangalore Escorts </a> 
+                                <a href="https://www.delhiescortsx.com/"> Delhi Escorts </a> 
+                                <a href="http://www.ankitavermas.com/"> Mumbai Escorts </a> 
+                            </div>
                         </div>
                         <div class="col-lg-7 col-md-7 mb-4 mt-4">
                             <?php $this->load->view('website/common/filter_city_country') ?>
                         </div>
                     </div>
-                    <header class="section-header">
-                        <h3 class="section-title">Escorts Directory</h3>
-                    </header>
+                    
+
                     <div class="row portfolio-container">
-                        <div class="col-lg-2 col-md-6">
+                       <div class="col-lg-2 col-md-6">
                             <div class=" left-bg">
                                 <div class="vertical-menu">
                                     <h1>Select Country</h1>
@@ -39,231 +42,41 @@
                             </div>
                         </div>
                         <div class="col-lg-8 col-md-6">
+                            <div class="row mb-4">
+                                <div class="col-lg-4 mb-lg-0 mb-4">
+                                    <div class="bannerAgency"> <a href="http://karishmasharma.com" target="_blank"> <img alt="banner" src="<?= base_url() ?>/banner_image/banner2.jpg" class="img-fluid" > </a> </div>
+                                </div>
+                                <div class="col-lg-4 mb-lg-0 mb-4">
+                                    <div class="bannerAgency"> <a href="http://www.mumbaiescortsx.com/" target="_blank"> <img alt="banner" src="<?= base_url() ?>/banner_image/banner1.gif" class="img-fluid"> </a> </div>
+                                </div>
+                                <div class="col-lg-4 mb-lg-0 mb-4">
+                                    <div class="bannerAgency"> <a href="http://www.nehatandan.com/" target="_blank"> <img alt="banner" src="<?= base_url() ?>/banner_image/nehatandan.jpg" class="img-fluid"> </a> </div>
+                                </div>
+                            </div>  
+                            <header class="section-header">
+                                <h3 class="section-title">Escorts Directory</h3>
+                            </header> 
+                            <div class="container-fluid" style="padding: 20px">
+                                <a href="http://www.twistsam.com/" target="_blank"><img src="http://localhost/jayrathod/cityxguid/assets/banner/twistsam-real.jpg" style="width: 100%"></a>
+                            </div>
                             <div class="row">
                                 <?php foreach ($premium_and_vip_post_key as $premium_and_vip_post_data) : ?>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a target="_blank" href="<?= $premium_and_vip_post_data->website_url ?>">
-                                        <div class="img-box">
-                                            <img style="width: 111px;height: 171px;" src="<?= base_url('post_image') ?>/<?= $premium_and_vip_post_data->image ?>" />
-                                            <h2><?= $premium_and_vip_post_data->name ?></h2>
-                                            <p><?= $premium_and_vip_post_data->city_name ?></p>
-                                        </div>
-                                    </a>
-                                    <div class="box-shadow"></div>
-                                </div>
-                            <?php endforeach ; ?>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/2.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/3.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/4.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/5.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/6.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/7.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/8.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/9.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/10.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/11.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/12.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/1.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                    <div class="box-shadow"></div>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/2.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/3.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/4.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/5.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/6.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/7.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/8.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/9.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/10.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/11.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
-                                    <a href="#">
-                                        <div class="img-box">
-                                            <img src="<?= base_url('assets/website') ?>/images/12.jpg" />
-                                            <h2>Anna REAL</h2>
-                                            <p>Antwerpen , Age: 24 yrs</p>
-                                        </div>
-                                    </a>
-                                </div>
+                                    <div class="col-lg-2 col-md-6 mb-4 pl-2 pr-2">
+                                        <a target="_blank" href="<?= $premium_and_vip_post_data->website_url ?>">
+                                            <div class="img-box">
+                                                <img class="img-fluid" style="height: 171px;" src="<?= base_url('post_image') ?>/<?= $premium_and_vip_post_data->image ?>" />
+                                                <h2><?= $premium_and_vip_post_data->name ?></h2>
+                                                <p><?= $premium_and_vip_post_data->city_name ?></p>
+                                            </div>
+                                        </a>
+                                        <div class="box-shadow"></div>
+                                    </div>
+                                <?php endforeach ; ?>
                             </div>
                             <header class="section-header">
                                 <h3 class="section-title">Recently Added</h3>
                             </header>
+
                             <div class="row">
                                 <div class="col-lg-12 col-md-12">
                                     <div class="recently-menu">
@@ -274,6 +87,11 @@
                                             </ul>
                                         <?php endforeach ; ?>
                                     </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <center>
+                                        <center><?= $this->pagination->create_links(); ?></center>
+                                    </center>
                                 </div>
                                 <div class="col-lg-12 col-md-6">
                                     <div class="recently-bg">
@@ -301,5 +119,6 @@
         <?php $this->load->view('website/common/footer') ?>
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
         <?php $this->load->view('website/common/js') ?>
+        <script src="<?= base_url('assets/website') ?>/js/content_copy_restriction.js" type="text/javascript"></script>
     </body>
 </html>
